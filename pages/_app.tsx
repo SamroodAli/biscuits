@@ -1,12 +1,12 @@
-import "../styles/globals.css";
+import "../styles/global.css";
 import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../theme";
+import Layout from "./layout";
+import { Roboto } from "@next/font/google";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <Layout>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Layout>
   );
 }
